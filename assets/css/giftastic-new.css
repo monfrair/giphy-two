@@ -10,7 +10,7 @@ body {
 
 h1, h2 {
 	font-family: 'Lato';
-	font-size: 40px;
+	font-size: 45px;
 	color: #fff;
 }
 
@@ -48,63 +48,22 @@ label {
 	cursor: crosshair;
 }
 
-/*
-img.squiggle {
-	top:0;
-	left:0;
-}
-*/
+
 
 #show-form {
 	display: inline;
 }
 
 button {
-	background: #fff;
+	background: #ffffff;
 	margin: 5px;
 	font-family: 'Lato', sans-serif;
 	color: black;
 }
 
-/*
-textarea:focus {
-  border-bottom: 2px solid #fff;
-  -webkit-box-shadow: 0 2px 0 0 #fff;
-  -moz-box-shadow: 0 2px 0 0 #fff;
-  box-shadow: 0 2px 0 0 #fff;
-}
-*/
 
-/*
-.waves-effect {
-	top: 15px;
-}
-*/
 
-/* border */
-/*
-#top,
-#bottom,
-#left,
-#right {
-	background: #fff;
-	position: fixed;
-}
-*/
 
-/*
-#left,
-#right {
-	top: 0; bottom: 0;
-	width: 15px;
-}
-	#left { left: 0; }
-	#right { right: 0; }
 
-#top,
-#bottom {
-	left: 0; right: 0;
-	height: 15px;
-}
-	#top { top: 0; }
-	#bottom { bottom: 0; }*/
+
+

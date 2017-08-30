@@ -1,29 +1,36 @@
-// create an array of shows - in this case, awesome 90's tv shows
-var shows = ["Eastbound and Down", "Curb Your Enthusiasm", "The Sopranos", "Silicon Valley", "Westworld", "Hard knocks", "Ballers", "Boardwalk Empire", "Game of Thrones",];
+// create the array of HBO tv shows 
+var shows = ["Eastbound and Down", "Curb Your Enthusiasm", "The Sopranos", "Silicon Valley", "Westworld", "Hard knocks", "Ballers", "Boardwalk Empire", "Game of Thrones"];
 
-// creates buttons for each of these
+// creates buttons for each of the tv shows
 function makeButtons(){ 
-	// deletes the shows prior to adding new shows so there are no repeat buttons
+	// empties the shows prior to adding new shows so there are no duplicate buttons
 	$('#buttonsView').empty();
 	// loops through the shows array
 	for (var i = 0; i < shows.length; i++){
-		// dynamically makes buttons for every show in the array
+		// dynamically create buttons for each show in the array
 		var a = $('<button>') 
-		a.addClass('show'); // add a class
+		a.addClass('show'); // add a class attribute
 		a.attr('data-name', shows[i]); // add a data-attribute
-		a.text(shows[i]); // make button text
+		a.text(shows[i]); // add text to the buttons
 		$('#buttonsView').append(a); // append the button to buttonsView div
 	}
 }
 
 // handles addShow button event
 $("#addShow").on("click", function(){
-
-	// grabs the user show input
+    // prevent form from trying to submit/refresh the page
+    event.preventDefault();
+    
+//    try to add ability to verify data was entered into form so blank buttons are not created
+    
+	// grabs the users input and 
 	var show = $("#show-input").val().trim();
-	// that input is now added to the array
+       
+	// push user input into the shows array
 	shows.push(show);
-	// the makeButtons function is called, which makes buttons for all my shows plus the user show
+    
+        
+	// the makeButtons function is called, which makes buttons for all shows in the array
 	makeButtons();
 	// this line is so users can hit "enter" instead of clicking the submit button
 	return false; 
@@ -45,16 +52,15 @@ function displayGifs(){
 				var gifDiv = $('<div class=gifs>');
 				var showGif = $('<img>');
 					showGif.attr('src', results[i].images.fixed_height_still.url);
-					// shows the rating on hover
+					// shows the Gif rating on hover
 					showGif.attr('title', "Rating: " + results[i].rating);
 					showGif.attr('data-still', results[i].images.fixed_height_still.url);
 					showGif.attr('data-state', 'still');
 					showGif.addClass('gif');
 					showGif.attr('data-animate', results[i].images.fixed_height.url);
-				// var rating = results[i].rating;
-				// var p = $('<p>').text('Rating: ' + rating);
+				
 				gifDiv.append(showGif)
-				// gifDiv.append(p)
+			
 
 				$("#gifsView").prepend(gifDiv);
 			}
@@ -62,7 +68,7 @@ function displayGifs(){
 		});
 }
 
-// function for animating gifs
+// function for animating gifs from class
 $(document).on('click', '.gif', function(){
 	var state = $(this).attr('data-state');
 		if ( state == 'still'){
