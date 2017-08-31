@@ -1,5 +1,5 @@
 // create the array of HBO tv shows 
-var shows = ["Eastbound and Down", "Curb Your Enthusiasm", "The Sopranos", "Silicon Valley", "Westworld", "Hard knocks", "Ballers", "Boardwalk Empire", "Game of Thrones"];
+var shows = ["Eastbound and Down", "Curb Your Enthusiasm", "The Sopranos", "The Simpsons", "Silicon Valley", "Westworld", "Hard knocks", "Ballers", "Boardwalk Empire", "Game of Thrones"];
 
 // creates buttons for each of the tv shows
 function makeButtons(){ 
