@@ -20,7 +20,7 @@ function makeButtons(){
 $("#addShow").on("click", function(){
     // prevent form from trying to submit/refresh the page
     event.preventDefault();
-    
+   // $('#buttonsView').empty();  check on addind this here and if it stops empty buttons from being made.
 //    try to add ability to verify data was entered into form so blank buttons are not created
     
 	// grabs the users input and 
